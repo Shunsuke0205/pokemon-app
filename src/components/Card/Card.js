@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Card.css';
 
 const Card = ({ pokemon }) => {
   return (
@@ -11,13 +12,13 @@ const Card = ({ pokemon }) => {
         <div>type</div>
         {pokemon.types.map((iType) => {
           return (
-            <div>
+            <div key={iType.type.name}>
               <span className="typeName">{iType.type.name}</span>
             </div>
           );
         })}
       </div>
-      <div className="cardInfomartion">
+      <div className="cardInformation">
         <div className="cardData">
           <p className="title">Weight: {pokemon.weight}</p>
         </div>
